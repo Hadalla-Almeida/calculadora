@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+  
+    <style>
+        body {
+        
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121214;
+    color: #e1e1e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  /* Container Principal da Calculadora */
+  .calculator-container {
+    background-color: #202024;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 320px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #00adb5;
+  }
+
+  /* Caixa de Inputs (Números) */
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    color: #a8a8b3;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #29292e;
+    background-color: #121214;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+
+  input:focus {
+    border-color: #00adb5;
+    outline: none;
+  }
+
+  /* Grid de Botões de Operação */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background-color: #29292e;
+    color: #e1e1e6;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+
+  button:hover {
+    background-color: #00adb5;
+    color: #121214;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Área do Resultado */
+  .result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #121214;
+    border-radius: 6px;
+    border-left: 4px solid #00adb5;
+  }
+
+  .result-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #a8a8b3;
+  }
+
+  .result-box span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+  }
+  </style>
+    <script>
+        function somar(){
+            const n1 = document.getElementById('n1').value
+             const n2 = document.getElementById('n2').value
+
+              const soma = Number(n1) + Number(n2)
+               document.getElementById('resultado').innerHTML='o resultado é ' + soma}
+
+                 function subtrair(){
+            const n1 = document.getElementById('n1').value
+             const n2 = document.getElementById('n2').value
+             
+                const subtraçao = Number(n1) - Number(n2)
+                 document.getElementById('resultado').innerHTML='o resultado é ' + subtraçao}
+
+                 function multiplicar(){
+            const n1 = document.getElementById('n1').value
+             const n2 = document.getElementById('n2').value
+
+              const multiplicaçao = Number(n1) * Number(n2)
+               document.getElementById('resultado').innerHTML='o resultado é ' + multiplicaçao}
+
+                 function dvidir(){
+            const n1 = document.getElementById('n1').value
+             const n2 = document.getElementById('n2').value
+
+              const divisao = Number(n1) / Number(n2)
+               document.getElementById('resultado').innerHTML='o resultado é ' + divisao}
+
+    </script>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <!-- COLOQUE O H1 EXATAMENTE AQUI DENTRO -->
+        <h1>FAÇA SEU CÁLCULO</h1>
+        
+    <form action="">
+      Numero 1 <input type="text" id="n1"/><br>
+      Numero 2 <input type="text" id="n2"><br>
+
+      <input type="button" value="soma" onclick="somar()">
+      <input type="button" value="subtraçao" onclick="subtrair()">
+      <input type="button" value="multiplicaçao" onclick="multiplicar()">
+      <input type="button" value="divisao" onclick="dvidir()">
+
+      <h1 id="resultado"> o resultado dos valores è 
+
+      </h1>
+    </form>
+</body>
+</html>
